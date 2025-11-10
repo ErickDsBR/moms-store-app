@@ -1,0 +1,14 @@
+import { Tabs } from "expo-router";
+
+export default function Tablayout() {
+    return (
+        <Tabs
+            screenOptions={{
+                headerShown: false,
+                headerShadowVisible: false,
+            }}
+        >
+            
+        </Tabs>
+    );
+}
