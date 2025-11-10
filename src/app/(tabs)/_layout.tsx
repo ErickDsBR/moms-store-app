@@ -8,7 +8,8 @@ export default function Tablayout() {
                 headerShadowVisible: false,
             }}
         >
-            
+            <Tabs.Screen name="home" />
+            <Tabs.Screen name="profile"/>
         </Tabs>
     );
 }

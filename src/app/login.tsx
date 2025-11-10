@@ -1,7 +1,7 @@
-import { Text, View } from "react-native";
+import { Link } from "expo-router";
+import { View, Text, TextInput } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "../../styles/auth.styles";
-
 export default function login() {
 
     return (
@@ -9,7 +9,7 @@ export default function login() {
             <SafeAreaView style={styles.container}>
                 <View style={styles.container}>
                     <View style={styles.boxLogin}>
-                        <Text></Text>
+                        <TextInput></TextInput>
                     </View>
                 </View>
             </SafeAreaView>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, View } from 'react-native'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
 
-export default function index() {
+export default function home() {
   return (
     <SafeAreaProvider>
       <SafeAreaView>
