@@ -11,7 +11,24 @@ export const styles = StyleSheet.create({
     width: 180,
     height: 180,
     borderRadius: 10,
-    backgroundColor: "blue",
+    backgroundColor: "#fff",
   },
+  boxSingup: {
+    width: 180,
+    height: 180,
+    borderRadius: 10,
+    backgroundColor: "#fff",
+
+  },
+  authlogin: {
+    fontSize: 20,
+    fontWeight: "bold",
+    textAlign: "center",
+
+  },
+  buttonlink: {
+    textAlign: "center",
+
+  }
 
 });

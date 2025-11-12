@@ -1,7 +1,8 @@
 import { Link } from "expo-router";
-import { View } from "react-native";
+import { TextInput, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "../../../styles/auth.styles";
+
 export default function login() {
 
     return (
@@ -9,7 +10,9 @@ export default function login() {
             <SafeAreaView style={styles.container}>
                 <View style={styles.container}>
                     <View style={styles.boxLogin}>
-                        <Link href="/auth/singup">Go to Singup</Link>
+                        <TextInput placeholder="Email" style={styles.authlogin} />
+                        <TextInput placeholder="Password" style={styles.authlogin} secureTextEntry={true} />
+                        <Link href="/auth/singup" style={styles.buttonlink} >Go to Singup</Link>
                     </View>
                 </View>
             </SafeAreaView>
