@@ -10,6 +10,10 @@ export default function login() {
     const [setemail, authmail] = useState("");
     const [setpassword, authpass] = useState("");
 
+    const handleLogin = () => {
+        console.log("Login attempted with:", setemail, setpassword);
+        // Add login logic here
+    }
 
     return (
         <SafeAreaProvider>
@@ -18,7 +22,7 @@ export default function login() {
                     <View style={styles.boxLogin}>
                         <TextInput onChangeText={authmail} value={setemail} placeholder="Email" style={styles.authlogin} />
                         <TextInput onChangeText={authpass} value={setpassword} placeholder="Password" style={styles.authlogin} secureTextEntry={true} />
-                        <TouchableOpacity style={styles.buttonlink}>Singup</TouchableOpacity>
+                        <TouchableOpacity onPress={handleLogin} style={styles.buttonlink}>Singup</TouchableOpacity>
                     </View>
                 </View>
             </SafeAreaView>
