@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 export const [product, setproduct] = useState(
     [{
         id: 1,
@@ -7,3 +6,5 @@ export const [product, setproduct] = useState(
         price: 9.99
     }]
 );
+
+

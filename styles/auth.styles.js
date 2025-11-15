@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
 
   },
   buttonlink: {
-    textAlign: "center",
+    justifyContent: "center",
 
   }
 
