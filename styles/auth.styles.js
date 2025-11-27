@@ -29,6 +29,11 @@ export const styles = StyleSheet.create({
   buttonlink: {
     justifyContent: "center",
 
-  }
+  },
+  buttonlink: {
+    backgroundColor: "#fff",
+    justifyContent: "center",
+    borderRadius: 5,
+  },
 
 });

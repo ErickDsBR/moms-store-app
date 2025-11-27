@@ -1,3 +1,2 @@
-export const supaUrl = "https://pmgyzzptkvwkkakzwhsz.supabase.co";
-
-export const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBtZ3l6enB0a3Z3a2tha3p3aHN6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMyMjA4MTksImV4cCI6MjA3ODc5NjgxOX0.afHRPqPa6IMTl6Bf_xwcIgWyWq66xnjil0z4O2kaRcw";
+export const supaUrl = process.env.EXPO_PUBLIC_SUPABASE_URL || "";
+export const anonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY || "";
