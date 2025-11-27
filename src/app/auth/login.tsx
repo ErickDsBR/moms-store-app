@@ -12,22 +12,21 @@ export default function login() {
     const [setpassword, authpass] = useState("");
     const [loading, setLoading] = useState(false);
 
-    async function handleSingUp() {
-        // Add login logic here
+    async function handleSingIn() {
         setLoading(true);
-
-        const { data, error } = await supabase.auth.signUp({
+        const { data, error } = await supabase.auth.signInWithPassword({
             email: setemail,
             password: setpassword,
 
-        })
+        });
         if (error) {
             Alert.alert("Error", error.message);
+            setLoading(false);
             return;
         }
-
         setLoading(false);
         router.replace("/home");
+
     }
 
     return (
@@ -36,15 +35,16 @@ export default function login() {
                 <View style={styles.container}>
 
                     <View style={styles.boxLogin}>
+
                         <TextInput onChangeText={authmail} value={setemail} placeholder="Digite seu Email" style={styles.authlogin} />
 
                         <TextInput onChangeText={authpass} value={setpassword} placeholder="Password" style={styles.authlogin} secureTextEntry={true} />
 
-                        <TouchableOpacity onPress={handleSingUp} style={styles.buttonlink}>
-                            <Text style={styles.singup_text}>Singup</Text>
+                        <TouchableOpacity onPress={handleSingIn} style={styles.buttonlink}>
+                            <Text style={styles.singup_text}>Entrar</Text>
                         </TouchableOpacity>
 
-                        <Link style={styles.link} href="/auth/singup" >
+                        <Link style={styles.link} href="/auth/singup">
                             <Text>Ainda Não Possui Uma Conta? Cadastre-Se!</Text>
                         </Link>
 

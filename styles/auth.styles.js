@@ -1,8 +1,9 @@
 import { StyleSheet } from "react-native";
-import { cozy, sophisticated } from "../constants/colors";
+import { cozy } from "../constants/colors";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignContent: "center",
     justifyContent: "center",
     backgroundColor: cozy.background,
   },
@@ -34,27 +35,21 @@ export const styles = StyleSheet.create({
 
   },
   buttonlink: {
-    justifyContent: "center",
-
-  },
-  buttonlink: {
-
+    marginTop: 20,
     borderRadius: 5,
-    justifyContent: "center",
-    textAlign: "center",
+   
   },
   singup_text: {
-    backdroColor: sophisticated.primary,
-    fontWeight: "bold",
+    textAlign: "center",
+    borderRadius: 10,
     fontSize: 20,
-    textAlign: "center",
+    fontWeight: "bold",
+
   },
-
-
   link: {
-    marginTop: 8,
     textAlign: "center",
-    justifyContent: "center",
-    alignItems: "center",
-  },
+    marginTop: 8,
+
+  }
+
 });
