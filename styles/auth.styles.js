@@ -1,11 +1,13 @@
 import { StyleSheet } from "react-native";
 import { cozy } from "../constants/colors";
+
+
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignContent: "center",
     justifyContent: "center",
-    backgroundColor: cozy.background,
+    backgroundColor: cozy.secondary,
   },
   boxLogin: {
     elevation: 50,
@@ -37,7 +39,7 @@ export const styles = StyleSheet.create({
   buttonlink: {
     marginTop: 20,
     borderRadius: 5,
-   
+
   },
   singup_text: {
     textAlign: "center",
@@ -50,6 +52,28 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     marginTop: 8,
 
+  },
+
+
+  //!-- HOME STYLES --!//
+  view_home: {
+    flex: 1,
+    backgroundColor: cozy.secondary,
+
+  },
+  container_logo: {
+    
+
+  },
+  logo: {
+    backgroundColor: '#fff',
+    margin: 10,
+    borderRadius: 75,
+    width: 100,
+    height: 100,
+
+    
   }
+
 
 });
