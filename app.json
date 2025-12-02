@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "TS-APP2.0",
-    "slug": "TS-APP2.0",
+    "name": "moms_app",
+    "slug": "moms_app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "",
     "scheme": "tsapp20",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -24,7 +24,7 @@
     },
     "web": {
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": ""
     },
     "plugins": [
       "expo-router",

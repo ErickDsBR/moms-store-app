@@ -1,6 +1,6 @@
 import { styles } from '@/styles/auth.styles'
 import React from 'react'
-import { Image, View } from 'react-native'
+import { Image, ScrollView, TextInput, View } from 'react-native'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
 export default function home() {
 
@@ -8,8 +8,14 @@ export default function home() {
     <SafeAreaProvider>
       <SafeAreaView style={styles.view_home}>
         <View style={styles.container_logo}>
-          <Image style = {styles.logo} source={require('@/assets/images/logo.png')}></Image>
+          <Image style={styles.logo} source={require('@/assets/images/logo.png')}></Image>
+          <TextInput style={styles.SearchBar} placeholder='Pesquisar ?'></TextInput>
         </View>
+        <ScrollView>
+          <View style={styles.container_products}>
+
+          </View>
+        </ScrollView>
       </SafeAreaView >
     </SafeAreaProvider>
   )

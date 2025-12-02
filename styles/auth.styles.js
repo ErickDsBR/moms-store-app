@@ -1,13 +1,9 @@
 import { StyleSheet } from "react-native";
 import { cozy } from "../constants/colors";
 
-
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignContent: "center",
-    justifyContent: "center",
-    backgroundColor: cozy.secondary,
   },
   boxLogin: {
     elevation: 50,
@@ -22,7 +18,6 @@ export const styles = StyleSheet.create({
     height: 180,
     borderRadius: 50,
     backgroundColor: "#fff",
-
   },
   authlogin: {
     borderRadius: 15,
@@ -34,46 +29,71 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     textAlign: "center",
-
   },
   buttonlink: {
     marginTop: 20,
     borderRadius: 5,
-
   },
   singup_text: {
     textAlign: "center",
     borderRadius: 10,
     fontSize: 20,
     fontWeight: "bold",
-
   },
   link: {
     textAlign: "center",
     marginTop: 8,
-
   },
-
 
   //!-- HOME STYLES --!//
   view_home: {
-    flex: 1,
     backgroundColor: cozy.secondary,
-
   },
   container_logo: {
-    
-
+    justifyContent: "space-between",
   },
   logo: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     margin: 10,
+    elevation: 15,
     borderRadius: 75,
-    width: 100,
-    height: 100,
+    width: 80,
+    height: 80,
+  },
+  SearchBar: {
+    borderColor: "#000",
+    backgroundColor: "#fff",
+    fontFamily: "arial",
+    textAlign: "center",
+    height: 40,
+    width: "80%",
+    margin: 10,
+    borderWidth: 1,
+    borderRadius: 10,
+  },
+  container_products: {},
 
-    
-  }
+  //!-- profile STYLES --!//
 
-
+  profile: {
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    height: 250,
+    backgroundColor: cozy.primary,
+  },
+  profile_pic: {
+    backgroundColor: "#fff",
+    borderWidth: 1,
+    elevation: 10,
+    width: 150,
+    height: 150,
+    borderRadius: 75,
+  },
+  profile_name: {
+    marginTop: 10,
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#000",
+  },
 });
