@@ -50,23 +50,25 @@ export const styles = StyleSheet.create({
     backgroundColor: cozy.secondary,
   },
   container_logo: {
+    display: "flex",
+    flexDirection: "row",
     justifyContent: "space-between",
+    marginTop: 10,
   },
   logo: {
     backgroundColor: "#fff",
-    margin: 10,
     elevation: 15,
     borderRadius: 75,
-    width: 80,
-    height: 80,
+    width: 75,
+    height: 75,
   },
   SearchBar: {
     borderColor: "#000",
     backgroundColor: "#fff",
     fontFamily: "arial",
     textAlign: "center",
+    width: "90%",
     height: 40,
-    width: "80%",
     margin: 10,
     borderWidth: 1,
     borderRadius: 10,
@@ -95,5 +97,14 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     color: "#000",
+  },
+
+  //!-- product box --!//
+  container_product: {
+
+  },
+  box_product: {
+
+
   },
 });
