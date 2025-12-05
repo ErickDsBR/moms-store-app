@@ -1,13 +1,15 @@
 import { supabase } from "@/lib/supabase";
 import { styles } from "@/styles/auth.styles";
 import React, { useEffect, useState } from "react";
-import { Image, ScrollView, Text, TextInput, View } from "react-native";
+import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+
 export default function home() {
+  const [prod, setopenProd] = useState(false);
   const [products, setProducts] = useState<any[]>([]);
 
   async function fetchProducts() {
-    const { error, data } = await supabase.from("products").select("*");
+    const { error, data } = await supabase.from("produtos").select("*");
 
     if (error) {
       console.log("Error fetching products:", error);
@@ -35,12 +37,13 @@ export default function home() {
         <ScrollView>
           <View style={styles.container_products}>
             {products.map((item) => (
-              <View key={item.id} style={styles.box_product}>
-                <Text key={item.name}></Text>
-              </View>
+              <TouchableOpacity key={item.id} style={styles.box_product}>
+                <Text key={item.id} style = {styles.prod_name}>{item.name}</Text>
+                <Text key={item.id} style = {styles.prod_value}>{item.preco}</Text>
+              </TouchableOpacity>
             ))}
           </View>
-        </ScrollView>
+        </ScrollView>       
       </SafeAreaView>
     </SafeAreaProvider>
   );

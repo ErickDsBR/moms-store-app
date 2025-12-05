@@ -52,6 +52,7 @@ export const styles = StyleSheet.create({
   container_logo: {
     display: "flex",
     flexDirection: "row",
+    alignItems: "center",
     justifyContent: "space-between",
     marginTop: 10,
   },
@@ -101,9 +102,28 @@ export const styles = StyleSheet.create({
 
   //!-- product box --!//
   container_product: {
-
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
   },
   box_product: {
+    width: 150,
+    backgroundColor: "#fff",
+    height: 250,
+    margin: 10,
+    borderRadius: 10,
+    elevation: 10,
+  },
+  prod_name: {
+    textAlign: "center",
+    fontSize: 16,
+    fontWeight: "bold",
+    marginTop: 5,
+
+
+  },
+  prod_value: {
 
 
   },
