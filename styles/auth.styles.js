@@ -101,10 +101,13 @@ export const styles = StyleSheet.create({
   },
 
   //!-- product box --!//
+  all_styles: {
+  display: "flex",
+  flexDirection: "row",
+  flexWrap: "wrap",
+  },
   container_product: {
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap",
+    activeOpacity: 1,
     justifyContent: "center",
   },
   box_product: {
@@ -121,10 +124,15 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     marginTop: 5,
 
+  },
+  pg_mogi:{
+
 
   },
   prod_value: {
 
+    textAlign: "center",
+    fontSize: 18,
 
   },
 });
