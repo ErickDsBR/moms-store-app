@@ -1,11 +1,11 @@
 import { supabase } from "@/lib/supabase";
 import { styles } from "@/styles/auth.styles";
 import React, { useEffect, useState } from "react";
-import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Image, Modal, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 export default function home() {
-  const [prod, setopenProd] = useState(false);
+  const [prod, setopenProd] = useState(false);   //* modal para abrir o produto 
   const [products, setProducts] = useState<any[]>([]);
 
   async function fetchProducts() {
@@ -38,7 +38,10 @@ export default function home() {
           <View style={styles.container_products}>
             {products.map((item) => (
               <View style = {styles.all_styles}>
-              <TouchableOpacity key={item.id} style={styles.box_product}>
+              <TouchableOpacity 
+              key={item.id} 
+              style={styles.box_product}>
+              onpress={}
                 <Text key={item.id} style = {styles.prod_name}>{item.name}</Text>
                 <Text key={item.pg} style = {styles.pg_mogi}>{item.pg}</Text>
                 <Text key={item.id} style = {styles.prod_value}>{item.preco}</Text> 
@@ -47,6 +50,13 @@ export default function home() {
             ))}
           </View>
         </ScrollView>       
+      </SafeAreaView>
+      <SafeAreaView>
+            <Modal>
+              <View>
+                
+              </View>
+            </Modal>
       </SafeAreaView>
     </SafeAreaProvider>
   );
