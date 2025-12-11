@@ -10,9 +10,9 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 interface product {
   id: number;
-  quantidade: number;
+  quantidade: string;
   name: string;
-  preco: string;
+  preco: Number;
 }
 
 export default function home() {
@@ -61,8 +61,7 @@ export default function home() {
               style={styles.box_product}
               >
                 <Text key={item.id} style = {styles.prod_name}>{item.name}</Text>
-                <Text key={item.pg}>{item.pg}</Text>
-                <Text key={item.id} style = {styles.prod_value}>{item.preco}</Text> 
+                <Text key={item.id} style = {styles.prod_value}>{(item.preco).toFixed(2)}</Text> 
               </TouchableOpacity>
               </View>
             ))}
@@ -81,7 +80,7 @@ export default function home() {
             >
               <View>
                 <Text>{selectedProductId?.name}</Text>  
-                <Text>{selectedProductId?.preco}</Text>
+                <Text>{(selectedProductId?.preco)?.toFixed(2)}</Text>
               </View>
             </Modal>
       </SafeAreaView>

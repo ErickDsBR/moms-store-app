@@ -68,13 +68,20 @@ export const styles = StyleSheet.create({
     backgroundColor: "#fff",
     fontFamily: "arial",
     textAlign: "center",
-    width: "90%",
+    width: "80%",
     height: 40,
     margin: 10,
     borderWidth: 1,
     borderRadius: 10,
   },
-  container_products: {},
+  container_products: {
+
+  },
+  floating_button: {
+
+    
+  },
+
 
   //!-- profile STYLES --!//
 
