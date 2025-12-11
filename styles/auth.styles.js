@@ -54,7 +54,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginTop: 10,
+    margin: 10,
   },
   logo: {
     backgroundColor: "#fff",
@@ -125,14 +125,14 @@ export const styles = StyleSheet.create({
     marginTop: 5,
 
   },
-  pg_mogi:{
-
-
-  },
   prod_value: {
 
     textAlign: "center",
     fontSize: 18,
+
+  },
+  modal_produto: {
+    
 
   },
 });
