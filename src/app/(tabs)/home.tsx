@@ -5,7 +5,7 @@ import { product } from "@/types/data";
 //! 
 
 import React, { useEffect, useState } from "react";
-import { Image, Modal, Pressable, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Image, Modal, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 interface product {
@@ -13,18 +13,26 @@ interface product {
   quantidade: string;
   name: string;
   preco: Number;
-}
+} 
+interface newProd {
+  name: string;
+  quantidade: string;
+  preco: Number;
+
+}//! funçao para adicionar novo produto
+
+
 
 export default function home() {
   const [prod, setopenProd] = useState(false);   //* modal para abrir o produto 
   const [products, setProducts] = useState<any[]>([]);
   const [selectedProductId, setSelectedProductId] = useState< product | null>(null); 
-
+  
   function handleOpenProduct(id: product) {
     setSelectedProductId(id);
     setopenProd(true);
   }
-
+  
   async function fetchProducts() {
     const { error, data } = await supabase.from("produtos").select("*");
 
@@ -67,9 +75,7 @@ export default function home() {
             ))}
           </View>
         </ScrollView>
-        <Pressable style = {styles.floating_button}>
-
-        </Pressable>     
+            
       </SafeAreaView>
       <SafeAreaView>
             <Modal
@@ -83,6 +89,7 @@ export default function home() {
                 <Text>{(selectedProductId?.preco)?.toFixed(2)}</Text>
               </View>
             </Modal>
+            
       </SafeAreaView>
     </SafeAreaProvider>
   );

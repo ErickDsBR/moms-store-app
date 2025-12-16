@@ -75,14 +75,13 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
   },
   container_products: {
-
-  },
-  floating_button: {
-
+    justifyContent: "center",
+    flexDirection: "row",
+    display: "flex",
+    flexWrap: "wrap",
     
   },
-
-
+  
   //!-- profile STYLES --!//
 
   profile: {
@@ -105,6 +104,29 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     color: "#000",
+  },
+  profile_options: {
+    display: "flex",
+    flexDirection: "column",
+    
+
+  },
+  buttons: {
+    textAlign: "center",
+    width: "100%",
+    height: 50,
+    marginTop: 10,
+    borderRadius: 10,
+    backgroundColor: "#fff",
+    borderBlockColor: "#000",
+    borderWidth: 1,
+  },
+  button_text: {
+    textAlign: "center",
+    fontSize: 18,
+    fontWeight: "bold",
+    marginTop: 10,
+    
   },
 
   //!-- product box --!//
@@ -133,7 +155,6 @@ export const styles = StyleSheet.create({
 
   },
   prod_value: {
-
     textAlign: "center",
     fontSize: 18,
 
