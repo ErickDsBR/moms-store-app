@@ -19,6 +19,7 @@
     "@rneui/themed": "^4.0.0-rc.8",
     "@supabase/supabase-js": "^2.81.1",
     "expo": "~54.0.25",
+    "expo-blur": "~15.0.8",
     "expo-constants": "~18.0.10",
     "expo-font": "~14.0.9",
     "expo-haptics": "~15.0.7",

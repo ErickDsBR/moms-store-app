@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
-import { cozy } from "../constants/colors";
+import { cozy, vibrant } from "../constants/colors";
+
 
 export const styles = StyleSheet.create({
   container: {
@@ -47,7 +48,7 @@ export const styles = StyleSheet.create({
 
   //!-- HOME STYLES --!//
   view_home: {
-    backgroundColor: cozy.secondary,
+    backgroundColor: vibrant.primary,
   },
   container_logo: {
     display: "flex",
@@ -68,7 +69,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#fff",
     fontFamily: "arial",
     textAlign: "center",
-    width: "80%",
+    width: "75%",
     height: 40,
     margin: 10,
     borderWidth: 1,
@@ -85,14 +86,18 @@ export const styles = StyleSheet.create({
   //!-- profile STYLES --!//
 
   profile: {
+    borderRadius: 30,
+    elevation: 10,
     alignItems: "center",
     justifyContent: "center",
     width: "100%",
     height: 250,
-    backgroundColor: cozy.primary,
+    backgroundColor: vibrant.primary,
   },
   profile_pic: {
     backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
     borderWidth: 1,
     elevation: 10,
     width: 150,
@@ -100,32 +105,49 @@ export const styles = StyleSheet.create({
     borderRadius: 75,
   },
   profile_name: {
-    marginTop: 10,
+    textAlign: "center",
     fontSize: 20,
     fontWeight: "bold",
     color: "#000",
   },
   profile_options: {
+    backgroundColor: vibrant.primary,
+    elevation: 20,
+    borderRadius: 15,
+    margin: 20,
+    padding: 20,
+    overflow: "hidden",
     display: "flex",
     alignItems: "center",
     flexDirection: "column",
   },
-  buttons: {
+  blur_view: {
+    backgroundColor: "#f5f5f5",
+    borderColor: "#000",
+    borderWidth: 1,
+    display: "flex",
     justifyContent: "center",
+    alignItems: "center",
+    height: 50,
+    width: "90%",
+    borderRadius: 10,
+    intensity: 90,
+    tint: "light",
+  },
+  buttons: {
+    elevation: 10,
+    justifyContent: "center",
+    alignItems: "center",
     width: "90%",
     height: 50,
-    marginTop: 10,
-    borderRadius: 10,
-    backgroundColor: "#fff",
-    borderBlockColor: "#000",
-    borderWidth: 1,
+    marginTop: 20,
+    
   },
   button_text: {
     textAlign: "center",
     fontSize: 18,
     fontWeight: "bold",
-   
-    
+  
   },
   //!-- modal styles ingredients--!//
 

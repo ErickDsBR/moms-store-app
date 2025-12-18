@@ -1,9 +1,9 @@
 import { supabase } from "@/lib/supabase";
 import { styles } from "@/styles/auth.styles";
+import { BlurView } from "expo-blur";
 import React, { useEffect, useState } from "react";
 import { Image, Modal, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-
 export default function profile() {
 
   const [ingredients, setIngredients] = useState(false);
@@ -34,7 +34,9 @@ export default function profile() {
         </View>
         <View style={styles.profile_options}>
           <TouchableOpacity style={styles.buttons} onPress={() => setIngredients(true)}>
-            <Text style = {styles.button_text} >Ingredientes</Text>
+            <BlurView style={styles.blur_view}>
+              <Text style = {styles.button_text}>Ingredientes</Text>
+            </BlurView>
           </TouchableOpacity>
           <TouchableOpacity style={styles.buttons}></TouchableOpacity>
           <TouchableOpacity style={styles.buttons}></TouchableOpacity>
@@ -48,7 +50,7 @@ export default function profile() {
         >
           <View style = {styles.container_ingredients}>
             {ingredientList.map((ingredient) => (
-              <View style = {styles.igr_box} key={ingredient.id}>
+              <View key={ingredient.id}>
                 <Text>{ingredient.name}</Text>
               </View>
             
