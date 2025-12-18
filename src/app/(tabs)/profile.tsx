@@ -46,7 +46,7 @@ export default function profile() {
         animationType="slide"
         onRequestClose={() => setIngredients(false)}
         >
-          <View>
+          <View style = {styles.container_ingredients}>
             {ingredientList.map((ingredient) => (
               <View key={ingredient.id}>
                 <Text>{ingredient.name}</Text>

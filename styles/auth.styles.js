@@ -108,8 +108,6 @@ export const styles = StyleSheet.create({
   profile_options: {
     display: "flex",
     flexDirection: "column",
-    
-
   },
   buttons: {
     textAlign: "center",
@@ -127,6 +125,14 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     marginTop: 10,
     
+  },
+  //!-- modal styles ingredients--!//
+
+  container_ingredients: {
+    flex: 1,
+    padding: 20,
+    borderRadius: 10,
+
   },
 
   //!-- product box --!//
