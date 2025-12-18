@@ -107,11 +107,12 @@ export const styles = StyleSheet.create({
   },
   profile_options: {
     display: "flex",
+    alignItems: "center",
     flexDirection: "column",
   },
   buttons: {
-    textAlign: "center",
-    width: "100%",
+    justifyContent: "center",
+    width: "90%",
     height: 50,
     marginTop: 10,
     borderRadius: 10,
@@ -123,7 +124,7 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 18,
     fontWeight: "bold",
-    marginTop: 10,
+   
     
   },
   //!-- modal styles ingredients--!//

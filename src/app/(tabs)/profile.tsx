@@ -48,7 +48,7 @@ export default function profile() {
         >
           <View style = {styles.container_ingredients}>
             {ingredientList.map((ingredient) => (
-              <View key={ingredient.id}>
+              <View style = {styles.igr_box} key={ingredient.id}>
                 <Text>{ingredient.name}</Text>
               </View>
             
