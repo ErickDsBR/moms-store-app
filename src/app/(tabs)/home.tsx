@@ -34,7 +34,9 @@ export default function home() {
   }
   
   async function fetchProducts() {
-    const { error, data } = await supabase.from("produtos").select("*");
+    const { error, data } = await supabase
+    .from("produtos")
+    .select("*");
 
     if (error) {
       console.log("Error fetching products:", error);
@@ -75,7 +77,7 @@ export default function home() {
             ))}
           </View>
         </ScrollView>
-            
+      
       </SafeAreaView>
       <SafeAreaView>
             <Modal
@@ -91,6 +93,13 @@ export default function home() {
             </Modal>
             
       </SafeAreaView>
+
+      <SafeAreaView>
+            <TouchableOpacity>
+                                  //! botao flutuante para adicionar novo produto
+            </TouchableOpacity>
+      </SafeAreaView>
+
     </SafeAreaProvider>
   );
 }
