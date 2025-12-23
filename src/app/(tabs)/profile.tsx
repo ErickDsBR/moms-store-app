@@ -7,6 +7,7 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 export default function profile() {
 
   const [ingredients, setIngredients] = useState(false);
+  const [addIngredient, setAddIngredient] = useState(false);
   const [ingredientList, setIngredientList] = useState<any[]>([]);
 
   async function fetchIngredients() {
@@ -38,7 +39,11 @@ export default function profile() {
               <Text style = {styles.button_text}>Ingredientes</Text>
             </BlurView>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.buttons}></TouchableOpacity>
+          <BlurView style={styles.blur_view}>
+            <TouchableOpacity style={styles.buttons} onPress={() => setAddIngredient(true)}>
+              <Text style = {styles.button_text}>Adicionar</Text>
+            </TouchableOpacity>
+          </BlurView>
           <TouchableOpacity style={styles.buttons}></TouchableOpacity>
         </View>
       </SafeAreaView>
@@ -52,13 +57,19 @@ export default function profile() {
             {ingredientList.map((ingredient) => (
               <View key={ingredient.id}>
                 <Text>{ingredient.name}</Text>
-              </View>
-            
-            ))}
-            
+              </View>      
+            ))}  
           </View>
-
         </Modal>
+      </SafeAreaView>
+      <SafeAreaView>
+            <Modal
+            visible={addIngredient}
+            animationType="slide"
+            onRequestClose={() => setAddIngredient(false)}
+            >
+
+            </Modal>
       </SafeAreaView>
     </SafeAreaProvider>
   );

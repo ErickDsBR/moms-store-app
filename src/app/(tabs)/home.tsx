@@ -12,12 +12,12 @@ interface product {
   id: number;
   quantidade: string;
   name: string;
-  preco: Number;
+  preco: number;
 } 
 interface newProd {
   name: string;
   quantidade: string;
-  preco: Number;
+  preco: number;
 
 }//! funçao para adicionar novo produto
 
@@ -94,11 +94,6 @@ export default function home() {
             
       </SafeAreaView>
 
-      <SafeAreaView>
-            <TouchableOpacity>
-                                  //! botao flutuante para adicionar novo produto
-            </TouchableOpacity>
-      </SafeAreaView>
 
     </SafeAreaProvider>
   );

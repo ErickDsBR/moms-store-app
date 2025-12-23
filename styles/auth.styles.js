@@ -112,12 +112,12 @@ export const styles = StyleSheet.create({
   },
   profile_options: {
     backgroundColor: vibrant.primary,
+    display: "flex",
     elevation: 20,
     borderRadius: 15,
     margin: 20,
     padding: 20,
     overflow: "hidden",
-    display: "flex",
     alignItems: "center",
     flexDirection: "column",
   },
@@ -125,7 +125,6 @@ export const styles = StyleSheet.create({
     backgroundColor: "#f5f5f5",
     borderColor: "#000",
     borderWidth: 1,
-    display: "flex",
     justifyContent: "center",
     alignItems: "center",
     height: 50,
@@ -135,16 +134,15 @@ export const styles = StyleSheet.create({
     tint: "light",
   },
   buttons: {
-    elevation: 10,
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    width: "90%",
+    elevation: 10,
+    width: "100%",
     height: 50,
-    marginTop: 20,
-    
+    margin: 10,
   },
   button_text: {
-    textAlign: "center",
     fontSize: 18,
     fontWeight: "bold",
   
