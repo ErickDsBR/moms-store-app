@@ -1,7 +1,6 @@
 import { StyleSheet } from "react-native";
 import { cozy, vibrant } from "../constants/colors";
 
-
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -80,9 +79,8 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     display: "flex",
     flexWrap: "wrap",
-    
   },
-  
+
   //!-- profile STYLES --!//
 
   profile: {
@@ -145,7 +143,19 @@ export const styles = StyleSheet.create({
   button_text: {
     fontSize: 18,
     fontWeight: "bold",
-  
+  },
+  container_addigr: {
+    flex: 1,
+    padding: 10,
+  },
+  text_igr: {
+    backgroundColor: vibrant.primary,
+    justifyContent: "center",
+    textAlign: "center",
+    borderRadius: 10,
+    elevation: 10,
+    fontSize: 20,
+    padding: 10,
   },
   //!-- modal styles ingredients--!//
 
@@ -153,14 +163,13 @@ export const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     borderRadius: 10,
-
   },
 
   //!-- product box --!//
   all_styles: {
-  display: "flex",
-  flexDirection: "row",
-  flexWrap: "wrap",
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
   },
   container_product: {
     activeOpacity: 1,
@@ -179,15 +188,10 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     marginTop: 5,
-
   },
   prod_value: {
     textAlign: "center",
     fontSize: 18,
-
   },
-  modal_produto: {
-    
-
-  },
+  modal_produto: {},
 });
